@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script defer src="./face-api.min.js"></script>
+    <script defer src="./face-api.js"></script>
+
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .video-container {
+            margin-bottom: 10px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .pause {
+            background-color: red;
+            color: white;
+        }
+
+        .resume {
+            background-color: green;
+            color: white;
+        }
+
+        canvas {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .add-face {
+            background-color: blue;
+            color: white;
+            margin-left: 10px;
+        }
+
+        .compare {
+            background-color: yellow;
+            color: black;
+            margin-left: 10px;
+        }
+
+        .delete-faces {
+            background-color: red;
+            color: black;
+            margin-left: 10px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="video-container">
+            <video id="video" width="720" height="560" autoplay></video>
+        </div>
+        <div class="button-container">
+            <button id="resumeButton" class="resume">Clean</button>
+            <button id="addFace1Button" class="add-face">Add Face 1</button>
+            <button id="addFace2Button" class="add-face">Add Face 2</button>
+            <button id="compareButton" class="compare">Compare</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
